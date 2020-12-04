@@ -7,8 +7,9 @@ class Stopwatch extends Component{
   constructor(props) {
     super(props);
     this.state = {
+      hour:0,
+      min: 0,
       second: 0,
-      milisec: 0,
       StartStop: "START",//fo check works of Stopwatch (Для проверки работы секундомера)
       Click: false, //for double click function (Для двойного нажатия)
     };
@@ -22,16 +23,18 @@ class Stopwatch extends Component{
     else if(Comand==="STOP"){// if "STOP" we are stoping timer and make time=0 (если "STOP" стоп мы обнуляем и останавливаем тамер)
       this.Timer(Comand)
       this.setState({
+        hour:0,
+        min: 0,
         second: 0,
-        milisec: 0,
         StartStop: "START" 
     });
     }
     else if (Comand==="RESTART"){ // if "RRESTART" time=0 but timer is not stoping(если "RRESTART" мы обнуляем время но не останавливаем таймер)
       
       this.setState({
+        hour:0,
+        min: 0,
         second: 0,
-        milisec: 0,
       });
       this.Timer("START")
     }
@@ -47,30 +50,42 @@ class Stopwatch extends Component{
       this.setState({
         StartStop: "STOP" //if StartStop=="STOP" timer is runing(если StartStop=="STOP" таймер идет)
       })
-      setTimeout(()=>this.Timer(null), 10);// and we restart timer with Comand=null ( и перезапускается с параметром Comand=null)
+      setTimeout(()=>this.Timer(null), 1000);// and we restart timer with Comand=null ( и перезапускается с параметром Comand=null)
     }
     else if (Comand === null){//if Comand null it's meen thet one comand was activete( Если Comand=null, это значит что таймер либо работает либо одна с команд была активирована)
       if(this.state.StartStop==="STOP"){//if StartStop="STOP" timer is working(если StartStop="STOP" то таймер в стационарном робочем режиме)
-        if(this.state.milisec>=99){// here we have manipulations with time(тут мы делаем счет времени)
+// here we have manipulations with time(тут мы делаем счет времени)
+        if(this.state.min>=59){
           this.setState((prevstate) => {
             return {
-              milisec: 0,
-              second:prevstate.second+1
+              min: 0,
+              hour:prevstate.hour+1
             };
           });
         }
-        else {
-          this.setState((prevstate) => {
-            return {
-              milisec: prevstate.milisec+1
-            };
-          });
+        else{
+          if(this.state.second>=59){
+            this.setState((prevstate) => {
+              return {
+                second: 0,
+                min:prevstate.min+1
+              };
+            });
+          }
+          else {
+            this.setState((prevstate) => {
+              return {
+                second: prevstate.second+1
+              };
+            });
+          }
         }
+        
         const source = Observable.create((observer) => {// here we restar timer and try to catch err, it was part of task(тут перезапускаем таймер и ловим ошибки)
           
           const timer = setTimeout(() => {
               this.Timer(null)
-          }, 10);
+          }, 1000);
       
           return () => {
             
@@ -96,7 +111,7 @@ class Stopwatch extends Component{
         this.setState({
           Click:false
       });
-      }, 200);//and Click staeing true 200 milisec then becam false(если мы не кликнем в тичении 200 милесикунд он вернется в исхдное положение)
+      }, 200);//and Click staeing true 200 second then becam false(если мы не кликнем в тичении 200 милесикунд он вернется в исхдное положение)
     }
     else{
       clearTimeout(this.timer); 
@@ -111,7 +126,7 @@ class Stopwatch extends Component{
     return (
       <div className="stopwatch">
         <div className="stopwatch_timer">
-          {this.state.second}:{this.state.milisec}
+          {this.state.hour}:{this.state.min}:{this.state.second}
         </div>
         <div className="stopwatch_buttons">
             <button onClick={()=>this.ComandWatch(this.state.StartStop)}>
