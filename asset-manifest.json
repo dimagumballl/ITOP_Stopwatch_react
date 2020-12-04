@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ITOP_Stopwatch_react/static/css/main.3daf1f2f.chunk.css",
-    "main.js": "/ITOP_Stopwatch_react/static/js/main.d58a4386.chunk.js",
-    "main.js.map": "/ITOP_Stopwatch_react/static/js/main.d58a4386.chunk.js.map",
+    "main.js": "/ITOP_Stopwatch_react/static/js/main.a9b63919.chunk.js",
+    "main.js.map": "/ITOP_Stopwatch_react/static/js/main.a9b63919.chunk.js.map",
     "runtime-main.js": "/ITOP_Stopwatch_react/static/js/runtime-main.1660b04e.js",
     "runtime-main.js.map": "/ITOP_Stopwatch_react/static/js/runtime-main.1660b04e.js.map",
     "static/js/2.5e2376de.chunk.js": "/ITOP_Stopwatch_react/static/js/2.5e2376de.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.1660b04e.js",
     "static/js/2.5e2376de.chunk.js",
     "static/css/main.3daf1f2f.chunk.css",
-    "static/js/main.d58a4386.chunk.js"
+    "static/js/main.a9b63919.chunk.js"
   ]
 }
