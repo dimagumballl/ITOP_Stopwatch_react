@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ITOP_Stopwatch_react/static/css/main.3daf1f2f.chunk.css",
+    "main.js": "/ITOP_Stopwatch_react/static/js/main.d58a4386.chunk.js",
+    "main.js.map": "/ITOP_Stopwatch_react/static/js/main.d58a4386.chunk.js.map",
+    "runtime-main.js": "/ITOP_Stopwatch_react/static/js/runtime-main.1660b04e.js",
+    "runtime-main.js.map": "/ITOP_Stopwatch_react/static/js/runtime-main.1660b04e.js.map",
+    "static/js/2.5e2376de.chunk.js": "/ITOP_Stopwatch_react/static/js/2.5e2376de.chunk.js",
+    "static/js/2.5e2376de.chunk.js.map": "/ITOP_Stopwatch_react/static/js/2.5e2376de.chunk.js.map",
+    "static/js/3.027fda42.chunk.js": "/ITOP_Stopwatch_react/static/js/3.027fda42.chunk.js",
+    "static/js/3.027fda42.chunk.js.map": "/ITOP_Stopwatch_react/static/js/3.027fda42.chunk.js.map",
+    "index.html": "/ITOP_Stopwatch_react/index.html",
+    "static/css/main.3daf1f2f.chunk.css.map": "/ITOP_Stopwatch_react/static/css/main.3daf1f2f.chunk.css.map",
+    "static/js/2.5e2376de.chunk.js.LICENSE.txt": "/ITOP_Stopwatch_react/static/js/2.5e2376de.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1660b04e.js",
+    "static/js/2.5e2376de.chunk.js",
+    "static/css/main.3daf1f2f.chunk.css",
+    "static/js/main.d58a4386.chunk.js"
+  ]
+}

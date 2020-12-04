@@ -1,0 +1,2 @@
+.stopwatch{width:100%;height:100%;font-size:300%;background-color:#a9a9a9}.stopwatch_timer{height:80%;flex-direction:row-reverse;align-items:center}.stopwatch_buttons,.stopwatch_timer{width:100%;display:flex;justify-content:center}.stopwatch_buttons{height:20%;flex-direction:row}.stopwatch_buttons>button{font-size:50%;width:100%;background-color:grey;border:0}.stopwatch_buttons>button:hover{background-color:green}.saveclass{display:none}*{margin:0;padding:0}.example{width:50%;height:400px;margin:auto}
+/*# sourceMappingURL=main.3daf1f2f.chunk.css.map */
